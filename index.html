@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator | RoomReady</title>
+
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <!-- OPEN GRAPH TAGS -->
+  <meta property="og:title" content="RoomReady" />
+  <meta property="og:description" content="Calculate paint and carpet supplies for your room with RoomReady." />
+  <meta property="og:image" content="https://hugowang-kimochi.github.io/1720-homeimprovement/images/opengraph.jpg" />
+  <meta property="og:url" content="https://hugowang-kimochi.github.io/1720-homeimprovement/" />
+  <meta property="og:logo" content="https://hugowang-kimochi.github.io/1720-homeimprovement/images/logo.svg" />
+  <meta property="og:type" content="website" />
+
+  <!-- FAV ICON LINKS-->
+  <link rel="icon" type="image/png" href="/1720-homeimprovement/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/1720-homeimprovement/favicon.svg" />
+  <link rel="shortcut icon" href="/1720-homeimprovement/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/1720-homeimprovement/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Home Improvement" />
+  <link rel="manifest" href="/1720-homeimprovement/site.webmanifest" />
+
+  <!-- SCRIPTS -->
+  <script src="scripts/year.js" defer></script>
+  <script src="scripts/calculator.js" defer></script>
+
+</head>
+
+<body>
+  <header>
+    <img src="images/logo.svg" alt="Site Logo" width="60" height="60" loading="lazy" />
+    <span>Room Ready</span>
+
+  </header>
+
+  <nav id="navbar">
+    <ul>
+      <li>
+        <a href="#">
+          <img src="images/nav-supplies.svg">
+          <div>Supplies</div>
+          </img>
+        </a>
+      </li>
+      <li class="active">
+        <a href="index.html">
+          <img src="images/nav-calculator.svg">
+          <div>Calculator</div>
+          </img>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="images/nav-color.svg">
+          <div>Find Colors</div>
+          </img>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="images/nav-pros.svg">
+          <div>For Pros</div>
+          </img>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Supply Calculator</h1>
+    <img class="hero" src="images/hero.png" alt="Paint supplies, carpet and a measuring tape">
+    <section id="signup" class="signup">
+      <form>
+        <label>
+          Room Width: <input type="number" id="width" class="input" placeholder="feet" required>
+        </label>
+        <label>
+          Room Depth: <input type="number" id="depth" class="input" placeholder="feet" required>
+        </label>
+        <label>
+          Wall Height <input type="number" id="height" class="input" placeholder="feet" required>
+        </label>
+
+        <label>Paint Quality
+          <select id="quality" required>
+            <option value="" disabled selected>Select an Oprion</option>
+            <option value="600">Premium (600sqft per gallon)</option>
+            <option value="500">Standard (500sqft per gallon)</option>
+            <option value="400">Cheap (400sqft per gallon)</option>
+          </select>
+        </label>
+        <input class="button" type="button" value="Calculate Supplies">
+      </form>
+    </section>
+
+    <section id="display" class="display">
+      <div></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/HugoWang-Kimochi" target="_blank"><img src="images/icon-github.svg" alt="GitHub Icon"
+          width="16" height="16" /></a>
+
+      <a href="https://www.linkedin.com/in/hugo-wang-6576a442b/" target="_blank"><img src="images/icon-linkedin.svg"
+          alt="Linked In Icon" width="16" height="16" /></a>
+
+      <a href="https://www.youtube.com/@LofiGirl" target="_blank"><img src="images/icon-youtube.svg" alt="Youtube Icon"
+          width="16" height="16" /></a>
+
+      <a href="https://www.facebook.com/profile.php?id=100000317223996" target="_blank"><img
+          src="images/icon-facebook.svg" alt="Facebook Icon" width="16" height="16" /></a>
+    </div>
+    <p>
+      &copy; <span id="currentyear"></span> &bull; Hugo Wang &bull; DWDD1720
+    </p>
+  </footer>
+</body>
+
+</html>

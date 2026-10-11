@@ -1,0 +1,35 @@
+@media only screen and (min-width: 40rem) {
+  header,
+  main,
+  nav,
+  footer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /*********************** NAVIGATION ************************/
+  nav {
+    position: static;
+  }
+  nav li {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+
+
+
+  /********************** MAIN STUFF ***********************/
+  .sbs {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  /********************** SCHEDULE LAYOUT ***********************/
+  .schedule {
+    font-size: 1rem;
+  }
+  .schedule img{
+    width: 100px;
+  }
+}

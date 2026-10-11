@@ -1,0 +1,258 @@
+/*********************** COLOR SCHEME ************************/
+:root {
+  --color-primary: #037d88;
+  --color-secondary: #aa3f5d;
+  /* series of Grey Scale Colors */
+  --color-mygrey-05: lab(98% 0 0);
+  --color-mygrey-10: lab(97% 0 0);
+  --color-mygrey-20: lab(91% 0 0);
+  --color-mygrey-30: lab(85% 0 0);
+  --color-mygrey-40: lab(66% 0 0);
+  --color-mygrey-50: lab(48% 0 0);
+  --color-mygrey-60: lab(34% 0 0);
+  --color-mygrey-70: lab(27% 0 0);
+  --color-mygrey-80: lab(15% 0 0);
+  --color-mygrey-90: lab(8% 0 0);
+  --color-mygrey-95: lab(3% 0 0);
+}
+
+
+/*********************** BORDER BOX ************************/
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/*********************** Body TAG ************************/
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #FAF8F5;
+  color: #292D34;
+}
+
+/*********************** HEADER ************************/
+header {
+  padding: 10px 0 10px 10px;
+  display: grid;
+  grid-template-columns: 24px auto;
+  align-items: end;
+  column-gap: 8px;
+  border-bottom: solid 1px var(--color-primary);
+}
+header img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+header span {
+  color: var(--color-secondary);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/*********************** NAVIGATION ************************/
+nav {
+  background-color: var(--color-primary);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+nav img {
+  width: 22px;
+  height: 22px;
+}
+nav a {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--color-mygrey-05);
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+}
+nav li.active a {
+  background-color: var(--color-secondary);
+  color: var(--color-mygrey-05);
+}
+nav a:hover {
+  text-decoration: underline;
+}
+nav.show {
+  display: block;
+}
+
+/********************* HAMBURGER STUFF **********************/
+
+.hamburger {
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: Verdana;
+}
+
+.hamburger::before {
+  content: "\2630";
+}
+
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+/*********************** MAIN LAYOUT ************************/
+h1 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+
+.sbs section {
+  border: 1px solid var(--color-mygrey-20);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+  margin: 0.5rem 10px;
+  overflow: hidden;
+}
+.sbs h2 {
+  background-color: var(--color-primary);
+  color: var(--color-mygrey-05);
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0.5rem 0.2rem;
+  text-align: center;
+}
+.sbs p {
+  font-weight: 200;
+  margin: 10px;
+  line-height: 130%;
+}
+.sbs img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*********************** ACCOUNT LAYOUT ************************/
+.hide{
+  display: none;
+}
+main section {
+  margin: .5rem 10px;
+  padding: 10px;
+}
+
+/*********************** SIGN UP STYLE ************************/
+.signup label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-mygrey-50);
+  display: block;
+  padding-bottom: 1rem;
+  
+}
+.signup input, select {
+  display: block;
+  padding: .5rem 10px;
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid var(--color-mygrey-20);
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.signup input[type="button"] {
+  background-color: var(--color-secondary);
+  color: var(--color-mygrey-05);
+  font-weight: 600;
+  border: none;
+  border-radius: 99px;
+}
+.signup input[type="button"]:hover {
+  background-color: var(--color-primary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+/*********************** DISPLAY STYLE ************************/
+.display h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 1rem 0 0.5rem;
+}
+.display p {
+  color: var(--color-mygrey-50);
+  margin: 0 0 0.75rem;
+}
+.display button {
+  background-color: var(--color-secondary);
+  color: var(--color-mygrey-05);
+  border: none;
+  border-radius: 99px;
+  padding: .5rem;
+  margin-top: .5rem;
+  width: 260px;
+}
+.display button:hover {
+  background-color: var(--color-primary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.display .error {
+  color: var(--color-secondary);
+}
+.display p:not(.error)::before {
+  content: "\2611";
+  margin-right: 0.5rem;
+  color: var(--color-secondary);
+  font-size: 1.3rem;
+}
+
+/********************** SOCIAL STUFF ***********************/
+.social {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+}
+.social img {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+.social a {
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f3ee;
+}
+.social a:hover {
+  background-color: #f6cfda;
+}
+/********************** FOOTER STUFF ***********************/
+
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-mygrey-05);
+  padding: 1rem 0;
+  text-align: center;
+  font-weight: 200;
+  font-size: 0.75rem;
+}
